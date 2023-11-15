@@ -308,24 +308,25 @@ const Home: React.FC = () => {
             <div className="center">
               <h1 className="title">Playlist</h1>
               <div className="content">
-                <ul className="musicList"></ul>
-                {musicList.map((item) => {
-                  return (
-                    <li className="item" key={item.id}>
-                      <CardComponent
-                        id={item.id}
-                        img={item.img}
-                        audio={item.audio}
-                        musicName={item.musicName}
-                        artistName={item.artistName}
-                        isPlaying={item.isPlaying}
-                        setMusicList={(updatedList) =>
-                          setMusicList(updatedList)
-                        }
-                      />
-                    </li>
-                  )
-                })}
+                <ul className="musicList">
+                  {musicList.map((item) => {
+                    return (
+                      <li className="item" key={item.id}>
+                        <CardComponent
+                          id={item.id}
+                          img={item.img}
+                          audio={item.audio}
+                          musicName={item.musicName}
+                          artistName={item.artistName}
+                          isPlaying={item.isPlaying}
+                          setMusicList={(updatedList) =>
+                            setMusicList(updatedList)
+                          }
+                        />
+                      </li>
+                    )
+                  })}
+                </ul>
               </div>
             </div>
           </div>

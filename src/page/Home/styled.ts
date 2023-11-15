@@ -179,34 +179,34 @@ export const MusicPlayer = styled.div`
       }
     }
   }
+
+  @media (min-width: 320px) and (max-width: 956px) {
+    width: 250px;
+
+    .controls {
+      .othersControls {
+        .item {
+          .musicVolume {
+            .musicVolumeOpen,
+            .musicVolumeClosed {
+              top: -150px;
+              left: -90px;
+              z-index: 2;
+              transform: rotate(-90deg);
+              .count {
+                transform: rotate(90deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 498px) and (max-width: 956px) {
+    width: 330px;
+  }
 `
-/*
-export const InputRange = styled.input.attrs({ type: 'range' })`
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  outline: 0;
-  height: 12px;
-  border-radius: 40px;
-  background: ${(props) =>
-    `linear-gradient(to right, #d5d9dc 0%, #d5d9dc ${props.value}%, #404240 ${props.value}%, #404240 100%)`};
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 14px;
-    height: 14px;
-    background-image: radial-gradient(circle, #d5d9dc 40%, #404240 45%);
-    border-radius: 50%;
-  }
-
-  &::-moz-range-thumb {
-    width: 24px;
-    height: 24px;
-    -moz-appearance: none;
-    background-image: radial-gradient(circle, #404240 40%, #d5d9dc 45%);
-    border-radius: 50%;
-  }
-` */
 export const InputRange = styled.input.attrs({ type: 'range' })`
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -281,7 +281,7 @@ export const MusicList = styled.div`
       }
 
       .content {
-        ul {
+        .musicList {
           gap: 1rem;
           display: flex;
           flex-direction: column;
@@ -290,34 +290,16 @@ export const MusicList = styled.div`
     }
   }
 
-  .center {
-    gap: 1rem;
-    display: flex;
-    margin-top: 2.5rem;
-    flex-direction: column;
+  @media (min-width: 320px) and (max-width: 498px) {
+    .container {
+      width: 250px;
 
-    .title {
-      color: #d5d9dc;
-      font-size: 1.3rem;
-    }
-
-    .content {
-      gap: 1rem;
-      height: 320px;
-      display: flex;
-      overflow: hidden;
-      overflow-y: scroll;
-      flex-direction: column;
-
-      &::-webkit-scrollbar {
-        width: 10px;
-        display: none;
-      }
-
-      .musicList {
-        gap: 1rem;
-        display: flex;
-        flex-direction: column;
+      .center {
+        .content {
+          .musicList {
+            gap: 1.5rem;
+          }
+        }
       }
     }
   }
